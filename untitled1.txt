@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+iris=pd.read_csv(r"C:\Users\kommu\OneDrive\Desktop\type2 diabates\diabetes.csv")
+iris.head()
+x=iris.iloc[:,1:5].values
+x
+y=iris.iloc[:,5].values
+y
+from  sklearn import preprocessing
+le=preprocessing.LabelEncoder()
+y=le.fit_transform(y)
+from sklearn.model_selection import train_test_split
+
+
+
